@@ -1,0 +1,297 @@
+body {
+    background-image: url('/img/fon.jpg');
+    color: #7709a3;
+}
+
+
+
+
+.nav-link {
+    color: #ffffff !important;
+    margin-right: 20px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff ;
+}
+
+.crypto-card {
+    background-color: #000000; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgb(0, 0, 0); 
+    transition: transform 0.3s ease; 
+    margin-bottom: 20px; 
+}
+
+.crypto-card:hover {
+    transform: translateY(-5px); 
+}
+
+
+.crypto-card p {
+    color: #e6e6e6; 
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+.crypto-card img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 15px 15px 0 0; 
+    margin-bottom: 15px; 
+    
+}
+
+.crypto-card .img-fluid {
+    max-width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto 15px; 
+}
+
+
+
+header {
+    background-color: #000000; 
+    color: #8605ff;
+    padding: 20px 0; 
+    font-size: 0.9rem;
+    border-bottom: 5px solid #7709a3; 
+}
+
+header h2 {
+    color: #ffffff;
+    margin-left: 20px; 
+}
+
+.nav {
+    padding-right: 20px; 
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7); 
+    transition: color 0.3s ease; 
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #2c0141; 
+    text-decoration: none; 
+}
+
+@media (max-width: 768px) {
+    header {
+        text-align: center; 
+    }
+
+    header h2 {
+        margin-left: 0; 
+    }
+}
+
+#cryptoInfo {
+    border-bottom: 5px solid #7709a3;
+}
+
+.container-fluid.mt-4 {
+  margin-top: 40px; 
+  width: 77%; 
+  min-width: 400px;
+  
+}
+
+
+
+.carousel-caption {
+    background-color: rgba(118, 9, 163, 0.75); 
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+.carousel-caption h5, .carousel-caption p {
+    color: #fff;
+}
+
+.carousel {
+    border-radius: 15px; 
+    overflow: hidden; 
+    width: 66%; 
+    margin: auto; 
+}
+
+.carousel-inner {
+    border-radius: 15px; 
+}
+
+.carousel-item img {
+    border-radius: 15px; 
+    object-fit: cover; 
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 15px; 
+    padding: 20px; 
+}
+
+
+.btn-group {
+    display: flex;
+    display: block;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px;
+    margin: 15px;
+    
+
+}
+
+.btn-primary {
+    background-color: #7709a3; 
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #5e087d; 
+}
+
+.btn-light {
+    background-color: #fff; 
+    color: #7709a3; 
+    border: 1px solid #7709a3;
+}
+
+.btn-light:hover {
+    background-color: #f2f2f2; 
+    color: #5e087d;
+}
+
+
+
+
+
+.site-footer {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    position: relative; 
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px; 
+    width: 100%; 
+    background-color: #7709a3; 
+}
+
+.site-footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.site-footer p, .site-footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-contact, .footer-links {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-contact, .footer-links {
+        text-align: center;
+    }
+
+    .footer-links {
+        margin-top: 20px;
+    }
+}
+
+
+
+  
+.animated-image {
+    transition: transform 0.5s ease; 
+    display: block; 
+    margin: 20px auto; 
+    transform: scale(1.0);
+}
+
+.animated-image:hover {
+    transform: scale(1.0) skewY(-5deg); 
+}
+
+
+
+
+.top-bar {
+    height: 50px; 
+    background-color: #000; 
+    color: #fff; 
+    
+}
+
+.bottom-bar {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 50px; 
+    background-color: #000; 
+    color: #fff; 
+    z-index: 10; 
+    
+}
+
+
+.poloska {
+    padding: 20px 0; 
+    font-size: 0.9rem;
+    border-bottom: 5px solid #7709a3; 
+}
+
+
+
+.store-links {
+    text-align: center; 
+}
+
+.store-links img {
+    margin: 5px; 
+    width: 75px; 
+    transition: transform 0.3s ease;
+    display: inline-block; 
+}
+
+.store-links img:hover {
+    transform: scale(1.05); 
+}
+
+
+
+
+
+
+
+
+
+
+
+

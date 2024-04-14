@@ -1,0 +1,321 @@
+body {
+    background-image: url('/img/fon.jpg');
+    color: #7709a3;
+}
+
+header {
+    background-color: #000000;
+    color: #8605ff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-bottom: 5px solid #7709a3;
+}
+
+header h2 {
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+.nav {
+    padding-right: 20px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        text-align: center;
+    }
+    header h2 {
+        margin-left: 0;
+    }
+}
+
+.site-footer {
+    color: #ffffff;
+    background-color: #000000;
+    padding: 40px 0;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #7709a3;
+}
+
+.site-footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.site-footer p,
+.site-footer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.site-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.site-footer ul li a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-contact,
+.footer-links {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer-contact,
+    .footer-links {
+        text-align: center;
+    }
+    .footer-links {
+        margin-top: 20px;
+    }
+}
+
+.user-info-card {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    border: 3px solid #7709a3;
+    border-radius: 15px;
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-info-header {
+    border-bottom: 3px solid #7709a3;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.user-info-header h3 {
+    color: #7709a3;
+    font-size: 1.5rem;
+}
+
+.user-info-details {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 20px;
+}
+
+.info-row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.info-row label {
+    font-weight: bold;
+    color: #ffffff;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 1.1rem;
+}
+
+.info-row span {
+    font-weight: normal;
+    color: #ababab;
+    font-size: 1.1rem;
+}
+
+.transaction-history-card {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 2px solid #7709a3;
+    border-radius: 15px;
+    background-color: #000000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.transaction-history-card h3 {
+    color: #7709a3;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.transaction-table th,
+.transaction-table td {
+    border: 1px solid #ccc;
+    padding: 12px 15px;
+    text-align: left;
+    background-color: #f8f8f8;
+}
+
+.transaction-table tbody tr {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.transaction-table tbody tr td:first-child,
+.transaction-table tbody tr th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.transaction-table tbody tr td:last-child,
+.transaction-table tbody tr th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.transfer-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.transfer-box {
+    width: 90%;
+    padding: 20px;
+    border: 2px solid #7709a3;
+    border-radius: 10px;
+    background-color: #000000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.input-group {
+    flex-basis: 22%;
+    min-width: 200px;
+}
+
+.transfer-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-transfer {
+    padding: 10px 20px;
+    background-color: #7709a3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 200px;
+    margin: 10px;
+}
+
+.btn-transfer:hover {
+    background-color: #5e087d;
+}
+
+.crypto-balance-card {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 3px solid #7709a3;
+    border-radius: 15px;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.crypto-balance-card h3 {
+    text-align: center;
+    color: #7709a3;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.crypto-table thead th {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+}
+
+.crypto-table tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    color: #ddd;
+}
+
+.crypto-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.btn-action {
+    padding: 5px 15px;
+    background-color: #7709a3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #5e087d;
+}
+
+.input-amount {
+    width: 70px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #444;
+    background-color: #222;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.input-amount:focus {
+    border-color: #7709a3;
+    outline: none;
+}

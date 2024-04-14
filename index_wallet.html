@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DarkCrypto</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="/main/style-wallet.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header class="d-flex align-items-center py-3 mb-4">
+      <h2 class="mr-auto text-white">DarkCrypto</h2>
+      <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#">Головна</a>
+        <a class="nav-link" href="#">Про нас</a>
+        <a class="nav-link" href="#">Мій гаманець</a>
+        <a class="nav-link" href="#">Підтримка інвестицій</a>
+      </nav>
+    </header>
+
+    <div class="image-container text-center">
+      <img src="card.jpg" alt="Descriptive Alt Text" class="fixed-size-image" />
+    </div>
+
+    <div class="user-info-card">
+      <div class="user-info-header">
+        <h3>Мій профіль</h3>
+      </div>
+      <div class="user-info-details">
+        <div class="info-row">
+          <label>Ім'я:</label>
+          <span id="userFirstName">Іван</span>
+        </div>
+        <div class="info-row">
+          <label>Прізвище:</label>
+          <span id="userLastName">Петрович</span>
+        </div>
+        <div class="info-row">
+          <label>Номер телефону:</label>
+          <span id="userPhoneNumber">+380 123456789</span>
+        </div>
+        <div class="info-row">
+          <label>Баланс:</label>
+          <span id="userBalance">1,000 гривень</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="transfer-container">
+      <div class="transfer-box">
+        <div class="input-group">
+          <input
+            type="text"
+            id="firstName"
+            placeholder="Ім'я"
+            class="transfer-input"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Прізвище"
+            class="transfer-input"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="tel"
+            id="phoneNumber"
+            placeholder="Номер телефону"
+            class="transfer-input"
+          />
+        </div>
+        <div class="input-group">
+          <input
+            type="number"
+            id="amount"
+            placeholder="Введіть суму коштів"
+            class="transfer-input"
+          />
+        </div>
+        <button onclick="transferMoney()" class="btn-transfer">
+          Переказ коштів
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function transferMoney() {
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        const amount = document.getElementById("amount").value;
+        if (!firstName || !lastName || !phoneNumber || !amount) {
+          alert("Будь ласка, заповніть всі поля.");
+        } else {
+          alert(
+            "Переказано " +
+              amount +
+              " гривень від " +
+              firstName +
+              " " +
+              lastName +
+              " на номер " +
+              phoneNumber +
+              "."
+          );
+        } 
+      }
+    </script>
+
+    <div class="crypto-balance-card">
+      <h3>Баланси криптовалют</h3>
+      <table class="crypto-table">
+        <thead>
+          <tr>
+            <th>Криптовалюта</th>
+            <th>Баланс</th>
+            <th>Вартість</th>
+            <th>Купити</th>
+            <th>Продати</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bitcoin (BTC)</td>
+            <td>0.75</td>
+            <td>$35,000</td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Купити</button>
+            </td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Продати</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Ethereum (ETH)</td>
+            <td>3.5</td>
+            <td>$2,500</td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Купити</button>
+            </td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Продати</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Ripple (XRP)</td>
+            <td>1500</td>
+            <td>$0.75</td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="1"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Купити</button>
+            </td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="1"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Продати</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Litecoin (LTC)</td>
+            <td>25</td>
+            <td>$90</td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Купити</button>
+            </td>
+            <td>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                placeholder="Кількість"
+                class="input-amount"
+              />
+              <button class="btn-action">Продати</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="transaction-history-card">
+      <h3>Історія переказів</h3>
+      <div class="table-responsive">
+        <table class="transaction-table">
+          <thead>
+            <tr>
+              <th>Дата</th>
+              <th>Відправник</th>
+              <th>Отримувач</th>
+              <th>Сума</th>
+              <th>Статус</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01/04/2023</td>
+              <td>Іван Петрович</td>
+              <td>Олексій Коваленко</td>
+              <td>1,000 грн</td>
+              <td>Завершено</td>
+            </tr>
+            <tr>
+              <td>02/04/2023</td>
+              <td>Іван Петрович</td>
+              <td>Марія Іваненко</td>
+              <td>500 грн</td>
+              <td>В обробці</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 footer-contact">
+            <h3>DarkCrypto</h3>
+            <p>Телефон: +123456789</p>
+            <p>Email: example@example.com</p>
+            <p>Адреса: вул. Прикладна, 123</p>
+          </div>
+          <div class="col-md-6 footer-links">
+            <h3>Посилання</h3>
+            <ul>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Telegram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
