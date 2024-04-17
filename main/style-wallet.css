@@ -1,19 +1,18 @@
 body {
-    background-image: url('/img/fon.jpg');
+    background-image: linear-gradient(to right, rgb(0, 0, 0) 15%, rgb(200, 200, 200) 50%, rgb(0, 0, 0) 85%);
+    background-attachment: fixed;
     color: #7709a3;
+    font-family: "Miriam Libre", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 header {
     background-color: #000000;
-    color: #8605ff;
-    padding: 20px 0;
+    padding: 20px;
     font-size: 0.9rem;
     border-bottom: 5px solid #7709a3;
-}
-
-header h2 {
-    color: #ffffff;
-    margin-left: 20px;
+    width: 100%;
 }
 
 .nav {
@@ -25,18 +24,16 @@ header h2 {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: rgba(255, 255, 255, 0.7);
+.nav-link:hover{
+    color: #4d1161;
     text-decoration: none;
 }
 
-
-
 @media (max-width: 768px) {
     header {
-        text-align: center;
+        text-align: center; 
     }
+
     header h2 {
         margin-left: 0;
     }
