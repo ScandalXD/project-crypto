@@ -1,56 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DarkCrypto</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./main/style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Miriam+Libre:wght@400;700&family=Nanum+Myeongjo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="container-fluid">
-    <header class="d-flex align-items-center py-3">
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./main/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Miriam+Libre:wght@400;700&family=Nanum+Myeongjo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <header class="d-flex align-items-center py-3">
         <h1 class="mr-auto text-white">DarkCrypto</h1>
         <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" href="#AboutUs">About us</a>
-            <a class="nav-link" href="index_wallet.html">Account</a>
-            <a class="nav-link" href="#">...</a>
+          <a class="nav-link" href="#AboutUs">About us</a>
+          <a class="nav-link" href="index_wallet.html">Account</a>
+          <a class="nav-link" href="#">...</a>
         </nav>
-    </header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      </header>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-ride="carousel"
+      >
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./img/slider4.jpg" class="welcome" alt="Slide 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h1>Welcome to DarkCrypto</h1>
-                    <p>Explore the world of cryptocurrency with us.</p>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-primary">Log in</button>
-                        <button type="button" class="btn btn-light">Sign in</button>
+          <div class="carousel-item active">
+            <img src="./img/slider4.jpg" class="welcome" alt="Slide 1" />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Welcome to DarkCrypto</h1>
+              <p>Explore the world of cryptocurrency with us.</p>
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-primary" id="login">Log in</button>
+                <button type="button" class="btn btn-light" id="register">Sign Up</button>
+              </div>
+              <div id="modal-register" class="modal-register">
+                <div class="modal-register-content">
+                  <span class="close-register">&times;</span>
+                  <h2>Registration form</h2>
+                  <div class="fields-register">
+                    <div class="name-fields">
+                      <input type="text" placeholder="Name" />
+                      <input type="text" placeholder="Surname" />
                     </div>
+                    <div class="email-password">
+                      <input type="email" placeholder="Email" />
+                      <input type="password" placeholder="Password" />
+                    </div>
+                  </div class="register-button">
+                  <button type="submit" >Register</button>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="price">
-      <p>Overview</p>
-      <div id="cryptoInfo" class="mb-4"></div>
-    </div>
-    
-    <div class="about" id="AboutUs">
-      <p>About us</p>
-      <p>We are a team of enthusiasts passionate about the world of cryptocurrencies and blockchain technologies. Our goal is to make buying cryptocurrency simple, secure, and accessible to everyone.
-
-        DarkCrypto was founded with the aim of providing our users with a convenient and intuitive way to invest in cryptocurrencies. We strive to be leaders in innovation and provide the most advanced solutions for our clients.
-
-        Our team consists of experienced professionals in finance, technology, and security, ready to assist you at every step of your journey into the world of cryptocurrencies. We take pride in our high security standards and rigorous procedures to protect your capital and personal data.
+              </div>
         
-        DarkCrypto aims to create a friendly and inspiring community for all those interested in cryptocurrencies. We invite you to join us and start your journey into the world of digital assets with us.</p>
-    </div>
-<!-- <div class="store-links">
+              <div id="modal-login" class="modal-login">
+                <div class="modal-login-content">
+                  <span class="close-login">&times;</span>
+                  <h2>Loging Form</h2>
+                  <div class="fields-login">
+                    <div class="email-password">
+                      <input type="email" placeholder="Email" />
+                      <input type="password" placeholder="Password" />
+                    </div>
+                  </div class="register-button">
+                  <button type="submit" >Login</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="price">
+        <p>Overview</p>
+        <div id="cryptoInfo" class="mb-4"></div>
+      </div>
+
+      <div class="about" id="AboutUs">
+        <p>About us</p>
+        <p>
+          We are a team of enthusiasts passionate about the world of
+          cryptocurrencies and blockchain technologies. Our goal is to make
+          buying cryptocurrency simple, secure, and accessible to everyone.
+          DarkCrypto was founded with the aim of providing our users with a
+          convenient and intuitive way to invest in cryptocurrencies. We strive
+          to be leaders in innovation and provide the most advanced solutions
+          for our clients. Our team consists of experienced professionals in
+          finance, technology, and security, ready to assist you at every step
+          of your journey into the world of cryptocurrencies. We take pride in
+          our high security standards and rigorous procedures to protect your
+          capital and personal data. DarkCrypto aims to create a friendly and
+          inspiring community for all those interested in cryptocurrencies. We
+          invite you to join us and start your journey into the world of digital
+          assets with us.
+        </p>
+      </div>
+      <!-- <div class="store-links">
      
     <a href="https://www.apple.com/app-store/" target="_blank">
         <img src="https://www.apple.com/v/app-store/b/images/overview/icon_appstore__ev0z770zyxoy_large_2x.png" alt="Download on the App Store" style="margin-right: 10px;">
@@ -63,58 +113,86 @@
 </div>
 <div class="poloska"></div> -->
 
-    <div class="mt-4">
+      <div class="mt-4">
         <div class="row">
-            <div class="col-md-6">
-                <div class="crypto-card d-flex flex-column align-items-center p-3">
-                    <img src="./img/bitoc.webp" alt="Криптовалюта" class="img-fluid" style="width: 50%; height: auto;">
-                    <p style="margin-left: 20px;">Bitcoin has recently made headlines by crossing the $70,000 threshold, marking a significant milestone in the cryptocurrency's history...</p>
-                </div>
-                <div class="crypto-card d-flex flex-column align-items-center p-3">
-                    <img src="./img/investor.webp" alt="Криптовалюта" class="img-fluid" style="width: 50%; height: auto;">
-                    <p style="margin-left: 20px;">Changpeng Zhao (CZ) – $15 Billion Net Worth... </p>
-                </div>
+          <div class="col-md-6">
+            <div class="crypto-card d-flex flex-column align-items-center p-3">
+              <img
+                src="./img/bitoc.webp"
+                alt="Криптовалюта"
+                class="img-fluid"
+                style="width: 50%; height: auto"
+              />
+              <p style="margin-left: 20px">
+                Bitcoin has recently made headlines by crossing the $70,000
+                threshold, marking a significant milestone in the
+                cryptocurrency's history...
+              </p>
             </div>
-            <div class="col-md-6">
-                <div class="crypto-card d-flex flex-column align-items-center p-3">
-                    <img src="./img/best.webp" alt="Криптовалюта" class="img-fluid" style="width: 50%; height: auto;">
-                    <p class="one" style="margin-left: 20px; margin-bottom: 40px;">Best Crypto To Buy Now... </p>
-                </div>
-                <div class="crypto-card d-flex flex-column align-items-center p-3">
-                    <img src="./img/elone.webp" alt="Криптовалюта" class="img-fluid" style="width: 50%; height: auto;">
-                    <p style="margin-left: 20px;">Elon Musk has been one of the leading voices in the crypto space... </p>
-                </div>
+            <div class="crypto-card d-flex flex-column align-items-center p-3">
+              <img
+                src="./img/investor.webp"
+                alt="Криптовалюта"
+                class="img-fluid"
+                style="width: 50%; height: auto"
+              />
+              <p style="margin-left: 20px">
+                Changpeng Zhao (CZ) – $15 Billion Net Worth...
+              </p>
             </div>
+          </div>
+          <div class="col-md-6">
+            <div class="crypto-card d-flex flex-column align-items-center p-3">
+              <img
+                src="./img/best.webp"
+                alt="Криптовалюта"
+                class="img-fluid"
+                style="width: 50%; height: auto"
+              />
+              <p class="one" style="margin-left: 20px; margin-bottom: 40px">
+                Best Crypto To Buy Now...
+              </p>
+            </div>
+            <div class="crypto-card d-flex flex-column align-items-center p-3">
+              <img
+                src="./img/elone.webp"
+                alt="Криптовалюта"
+                class="img-fluid"
+                style="width: 50%; height: auto"
+              />
+              <p style="margin-left: 20px">
+                Elon Musk has been one of the leading voices in the crypto
+                space...
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
+
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-contact">
+              <h3>DarkCrypto</h3>
+              <p>Phone: +123456789</p>
+              <p>Email: example@example.com</p>
+              <p>Address: ul. Example, 123</p>
+            </div>
+            <div class="col-md-6 footer-links">
+              <h3>Social</h3>
+              <ul>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Telegram</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
-
-    
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 footer-contact">
-                    <h3>DarkCrypto</h3>
-                    <p>Phone: +123456789</p>
-                    <p>Email: example@example.com</p>
-                    <p>Address: ul. Example, 123</p>
-                </div>
-                <div class="col-md-6 footer-links">
-                    <h3>Social</h3>
-                    <ul>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Telegram</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-<script src="./scrypts/script.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./scrypts/script.js"></script>
+  </body>
 </html>
